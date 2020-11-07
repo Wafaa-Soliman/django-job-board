@@ -37,6 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # my apps
+    'home.apps.HomeConfig',
+    'job.apps.JobConfig',
+    'blog.apps.BlogConfig',
+    'accounts.apps.AccountsConfig',
+    'contact.apps.ContactConfig',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +81,12 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'jobBoard',
+        'USER': 'postgres',
+        'PASSWORD': 'wafaa',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
